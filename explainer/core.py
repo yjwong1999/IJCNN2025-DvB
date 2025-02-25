@@ -170,6 +170,7 @@ class yolov8_heatmap:
             layer=[12, 17, 21],
             conf_threshold=0.2,
             ratio=0.02,
+            img_shape=None,
             show_box=True,
             renormalize=False,
     ) -> None:
@@ -295,17 +296,29 @@ class yolov8_heatmap:
 
     def process(self, img_path):
         """Process the input image and generate CAM visualization."""
-        img = cv2.imread(img_path)
-        img = letterbox(img)[0]
+        # Read the image and apply letterbox.
+        img = cv2.imread(img_path)        
+
+        # If a specific image shape is provided, save the original size and resize the image.
+        if self.img_shape is not None:
+            orig_shape = (img.shape[1], img.shape[0])  # (width, height)
+            img = cv2.resize(img, self.img_shape)
+        # else use letter box
+        else:
+            img = letterbox(img)[0]
+
+        # Convert color space and normalize.
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         img = np.float32(img) / 255.0
 
+        # Prepare the image tensor.
         tensor = (
             torch.from_numpy(np.transpose(img, axes=[2, 0, 1]))
             .unsqueeze(0)
             .to(self.device)
         )
 
+        # Generate the CAM.
         try:
             grayscale_cam = self.method(tensor, [self.target])
         except AttributeError as e:
@@ -314,6 +327,7 @@ class yolov8_heatmap:
 
         grayscale_cam = grayscale_cam[0, :]
 
+        # Obtain model predictions.
         pred1 = self.model(tensor)[0]
         pred = non_max_suppression(
             pred1,
@@ -321,8 +335,7 @@ class yolov8_heatmap:
             iou_thres=0.45
         )[0]
 
-        # Debugging print
-
+        # Generate the CAM image.
         if self.renormalize:
             cam_image = self.renormalize_cam(
                 pred[:, :4].cpu().detach().numpy().astype(np.int32),
@@ -332,24 +345,30 @@ class yolov8_heatmap:
         else:
             cam_image = show_cam_on_image(img, grayscale_cam, use_rgb=True)
 
+        # Draw detection boxes if needed.
         if self.show_box and len(pred) > 0:
             for detection in pred:
                 detection = detection.cpu().detach().numpy()
 
-                # Get class index and confidence
+                # Get class index and confidence.
                 class_index = int(detection[5])
                 conf = detection[4]
 
-                # Draw detection
+                # Draw the detection box.
                 cam_image = self.draw_detections(
-                    detection[:4],  # Box coordinates
-                    self.colors[class_index],  # Color for this class
-                    f"{self.model_names[class_index]}",  # Label with confidence
+                    detection[:4],            # Box coordinates.
+                    self.colors[class_index], # Color for this class.
+                    f"{self.model_names[class_index]}",  # Label.
                     cam_image,
                 )
 
+        # If the image was resized, change the CAM image back to its original shape.
+        if self.img_shape is not None:
+            cam_image = cv2.resize(cam_image, orig_shape)
+
         cam_image = Image.fromarray(cam_image)
         return cam_image
+
 
     def __call__(self, img_path):
         """Generate CAM visualizations for one or more images.
