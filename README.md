@@ -12,7 +12,7 @@ The dataset was provided by the [WOSDETC](https://github.com/wosdetc/challenge) 
 
 ## Cite this repository
 
-Our paper has been accepted by IJCNN 2025! Please cite our paper if this repo helps your research. The preprint will be released soon.
+Please cite our paper if this repo helps your research. The preprint will be released soon.
 
 ```
 @InProceedings{Wong2024,
