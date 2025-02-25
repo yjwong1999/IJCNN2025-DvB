@@ -1,4 +1,4 @@
-# [IJCNN 2025] WRN-YOLO: An Improved YOLO for Drone Detection using Wide ResNet
+# WRN-YOLO: An Improved YOLO for Drone Detection using Wide ResNet
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/yjwong1999/IJCNN2025-DvB)
 
