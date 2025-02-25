@@ -189,8 +189,7 @@ class yolov8_heatmap:
         target = yolov8_target(backward_type, conf_threshold, ratio)
         target_layers = [model.model[l] for l in layer]
 
-        method = eval(method)(model, target_layers,
-                              use_cuda=device.type == 'cuda')
+        method = eval(method)(model, target_layers)
         method.activations_and_grads = ActivationsAndGradients(
             model, target_layers, None)
 
