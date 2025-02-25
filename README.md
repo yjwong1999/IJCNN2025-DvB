@@ -8,3 +8,16 @@ This code is our solution for the [8th WOSDETC Drone-vs-Bird Detection Challenge
 
 ## **Dataset**
 The dataset was provided by the [WOSDETC](https://github.com/wosdetc/challenge) Drone-vs-Bird Detection Challenge [@IJCNN2025](https://2025.ijcnn.org/) committee. To aquire the dataset you may follow the instructions [here](https://wosdetc2025.wordpress.com/instruction-for-authors/). You will be asked to sign a data usage agreement and can then use the data for research purposes.  
+
+
+## Cite this repository
+
+Our paper has been accepted by IJCNN 2025! Please cite our paper if this repo helps your research. The preprint will be released soon.
+
+```
+@InProceedings{Wong2024,
+title = {WRN-YOLO: An Improved YOLO for Drone Detection using Wide ResNet},
+author = {Yi Jie Wong and Wingates Voon and Mau-Luen Tham and Ban-Hoe Kwan and Yoong Choon Chang and Yan Chai Hum},
+booktitle={2025 International Joint Conference on Neural Networks (IJCNN)},
+year={2025}}
+```
