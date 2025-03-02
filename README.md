@@ -8,7 +8,13 @@ This code is our solution for the [8th WOSDETC Drone-vs-Bird Detection Challenge
 
 The complete code will be released upon paper acceptance!
 
-## **Dataset**
+## Setup environment
+```bash
+pip install ultralytics==8.3.71
+pip install grad-cam==1.5.4
+```
+
+## Dataset
 The dataset was provided by the [WOSDETC](https://github.com/wosdetc/challenge) Drone-vs-Bird Detection Challenge [@IJCNN2025](https://2025.ijcnn.org/) committee. To aquire the dataset you may follow the instructions [here](https://wosdetc2025.wordpress.com/instruction-for-authors/). You will be asked to sign a data usage agreement and can then use the data for research purposes.  
 
 ## Acknowledgement
