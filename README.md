@@ -20,6 +20,7 @@ The dataset was provided by the [WOSDETC](https://github.com/wosdetc/challenge) 
 ## Acknowledgement
 1. Annotations for this dataset are available at [the official repo of the challenge](https://github.com/wosdetc/challenge).
 2. The heatmap generation using GradCAM (and etc.) are based on [YOLOv8 Explainer repo](https://github.com/Spritan/YOLOv8_Explainer).
+3. The official ultralytics [repo](https://github.com/ultralytics/ultralytics).
 
 
 ## Cite this repository
