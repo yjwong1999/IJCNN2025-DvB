@@ -11,6 +11,9 @@ The complete code will be released upon paper acceptance!
 ## **Dataset**
 The dataset was provided by the [WOSDETC](https://github.com/wosdetc/challenge) Drone-vs-Bird Detection Challenge [@IJCNN2025](https://2025.ijcnn.org/) committee. To aquire the dataset you may follow the instructions [here](https://wosdetc2025.wordpress.com/instruction-for-authors/). You will be asked to sign a data usage agreement and can then use the data for research purposes.  
 
+## Acknowledgement
+1. Annotations for this dataset are available at [the official repo of the challenge](https://github.com/wosdetc/challenge).
+
 
 ## Cite this repository
 
