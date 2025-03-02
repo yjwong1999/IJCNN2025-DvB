@@ -17,7 +17,7 @@ The dataset was provided by the [WOSDETC](https://github.com/wosdetc/challenge) 
 Please cite our paper if this repo helps your research. The preprint will be released soon.
 
 ```
-@InProceedings{Wong2024,
+@InProceedings{Wong2025,
 title = {WRN-YOLO: An Improved YOLO for Drone Detection using Wide ResNet},
 author = {Yi Jie Wong and Wingates Voon and Mau-Luen Tham and Ban-Hoe Kwan and Yoong Choon Chang and Yan Chai Hum},
 booktitle={2025 International Joint Conference on Neural Networks (IJCNN)},
