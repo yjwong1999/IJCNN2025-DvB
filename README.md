@@ -6,8 +6,6 @@
 
 This code is our solution for the [8th WOSDETC Drone-vs-Bird Detection Challenge](https://wosdetc2025.wordpress.com/), hosted at IJCNN 2025. Specifically, this repository provides the code to create our proposed WRN-YOLO and the synthetic dataset used in our submission. Our approach ranked Top 3 globally in the challenge! 🏅🎉🥳
 
-The complete code will be released upon paper acceptance!
-
 ## Setup environment
 ```bash
 pip install ultralytics==8.3.71
