@@ -15,6 +15,8 @@ pip install grad-cam==1.5.4
 ## Dataset
 The dataset was provided by the [WOSDETC](https://github.com/wosdetc/challenge) Drone-vs-Bird Detection Challenge [@IJCNN2025](https://2025.ijcnn.org/) committee. To aquire the dataset you may follow the instructions [here](https://wosdetc2025.wordpress.com/instruction-for-authors/). You will be asked to sign a data usage agreement and can then use the data for research purposes.  
 
+Meanwhile, you can also download our synthetic dataset in [roboflow](https://universe.roboflow.com/project-psbzx/synthetic-fenky).
+
 ## Acknowledgement
 1. Annotations for this dataset are available at [the official repo of the challenge](https://github.com/wosdetc/challenge).
 2. The heatmap generation using GradCAM (and etc.) are based on [YOLOv8 Explainer repo](https://github.com/Spritan/YOLOv8_Explainer).
