@@ -25,7 +25,7 @@ Meanwhile, you can also download our synthetic dataset in [roboflow](https://uni
 
 ## Cite this repository
 
-Please cite our paper if this repo helps your research. The preprint will be released soon.
+Please cite our paper if this repo helps your research. The preprint can be found [here](https://doi.org/10.36227/techrxiv.174495627.74350303/v1)!
 
 ```
 @InProceedings{Wong2025,
