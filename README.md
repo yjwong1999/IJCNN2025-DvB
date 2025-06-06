@@ -17,6 +17,12 @@ The dataset was provided by the [WOSDETC](https://github.com/wosdetc/challenge) 
 
 Meanwhile, you can also download our synthetic dataset in [roboflow](https://universe.roboflow.com/project-psbzx/synthetic-fenky).
 
+
+## Future Works
+1. Consider using SAHI, and evaluate using [SAHI evaluation code](https://github.com/ultralytics/ultralytics/issues/7768#issuecomment-1906360471)
+2. Add birds as distraction objects
+
+
 ## Acknowledgement
 1. Annotations for this dataset are available at [the official repo of the challenge](https://github.com/wosdetc/challenge).
 2. The heatmap generation using GradCAM (and etc.) are based on [YOLOv8 Explainer repo](https://github.com/Spritan/YOLOv8_Explainer).
