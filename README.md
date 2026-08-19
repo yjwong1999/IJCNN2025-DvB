@@ -22,6 +22,8 @@ Meanwhile, you can also download our synthetic dataset in [roboflow](https://uni
 1. Consider using SAHI, and evaluate using [SAHI evaluation code](https://github.com/ultralytics/ultralytics/issues/7768#issuecomment-1906360471)
 2. Add birds as distraction objects
 
+## Performance in Other Dataset(s)
+1. IRAIR Dataset - According to "DAENet: Dynamic Adversarial Enhancement Network for Infrared Weak Target Detection", WRN-YOLO is one of the best models in IRAIR dataset, second only to their proposed DAENet. Feel free to checkout their proposed model as well!
    
 
 ## YOLO backbone & architecture customization
